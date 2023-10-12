@@ -33,6 +33,13 @@ a {
 	text-decoration: none;
 }
 
+img {
+	width: 100%;
+	object-fit: cover;
+	overflow: clip;
+	border-radius: 25px;
+}
+
 .banner {
 	display: grid;
 	grid-template-columns: auto 1fr;
