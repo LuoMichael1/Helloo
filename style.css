@@ -65,11 +65,18 @@ img {
 .content > div {
 	border-radius: 25px;
 	background-color: white;
+	background-size: 200%; 
+	background-position: center;
 }
 
 .content > div > img {
 	opacity:0;
-	width:100%;
+}
+.content > div > h3 {
+	font-size:40px;
+	margin:20px;
+	margin-top:220px;
+	color:#FFF6F0;
 }
 
 
