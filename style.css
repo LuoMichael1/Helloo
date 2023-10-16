@@ -67,6 +67,12 @@ img {
 	background-color: white;
 }
 
+.content > div > img {
+	opacity:0;
+	width:100%;
+}
+
+
 #hello {
 	padding-bottom: 20%;
 }
