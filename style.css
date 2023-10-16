@@ -1,7 +1,13 @@
+:root {
+	--main-color1: #FFF6F0; /* Background - light beige */
+	--main-color2: #0D1321; /* text - essentially black */
+}
+
+
 html {
-	background-color: #FFF6F0;
+	background-color: var(--main-color1);
 	font-family: Lexend, helvetica, Sans-serif;
-	color: #0d1321;
+	color: var(--main-color2);
 }
 
 h1 {
@@ -56,7 +62,7 @@ img {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	gap: 11px;
-	margin-top: 11px;
+	margin-top: 30px;
 	margin-left: 5%;
 	margin-bottom: 50px;
 	width: 90%;
@@ -67,16 +73,14 @@ img {
 	background-color: white;
 	background-size: 200%; 
 	background-position: center;
+	background-repeat: no-repeat;
 }
 
-.content > div > img {
-	opacity:0;
-}
 .content > div > h3 {
-	font-size:40px;
-	margin:20px;
-	margin-top:220px;
-	color:#FFF6F0;
+	font-size: 40px;
+	margin: 20px;
+	margin-top: 220px;
+	color: var(--main-color1);
 }
 
 
