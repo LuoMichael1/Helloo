@@ -1,5 +1,5 @@
 :root {
-	--main-color1: #FFF6F0; /* Background - light beige #FFF6F0 */
+	--main-color1: #FFF6F0; /* Background - light beige */
 	--main-color2: #0D1321; /* text - essentially black */
 }
 
@@ -61,7 +61,7 @@ img {
 .content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 500px 500px 500px; 
+	grid-template-rows: 100% 100% 100%; 
 	gap: 11px;
 	margin-top: 30px;
 	margin-left: 5%;
