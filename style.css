@@ -1,5 +1,5 @@
 :root {
-	--main-color1: #FFF6F0; /* Background - light beige */
+	--main-color1: #FFF6F0; /* Background - light beige #FFF6F0 */
 	--main-color2: #0D1321; /* text - essentially black */
 }
 
@@ -60,7 +60,8 @@ img {
 }
 .content {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 500px 500px 500px; 
 	gap: 11px;
 	margin-top: 30px;
 	margin-left: 5%;
@@ -76,12 +77,12 @@ img {
 	background-repeat: no-repeat;
 }
 
-.content > div > h3 {
-	font-size: 40px;
-	margin: 20px;
-	margin-top: 220px;
-	color: var(--main-color1);
-}
+	.content > div > h3 {
+		font-size: 40px;
+		margin: 20px;
+		margin-top: 430px;
+		color: var(--main-color1);
+	}
 
 
 #hello {
