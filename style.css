@@ -10,6 +10,10 @@ html {
 	color: var(--main-color2);
 }
 
+body {
+	margin: 0px;
+}
+
 h1 {
 	font-size:12vw;
 	margin-right:20px;
@@ -53,7 +57,7 @@ img {
 	margin-left: 6%;
 	margin-right: 6%;
 	margin-bottom: 100px; 
-	padding-bottom: 20%;
+	padding-bottom: 5%;
 	width: 88%;
 }
 .content {
@@ -83,7 +87,12 @@ img {
 	color: var(--main-color1);
 }
 
-
 #hello {
 	padding-bottom: 20%;
+}
+
+#gradient {
+	display: flex;
+	justify-content: center;
+	width: 120%;
 }
