@@ -1,6 +1,6 @@
 :root {
 	--main-color1: White; /* Background */
-	--main-color2: #0D1321; /* text - essentially black */
+	--main-color2: black; /* text - essentially black */
 }
 
 
@@ -65,10 +65,10 @@ img {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 500px 500px 500px; 
 	gap: 11px;
-	margin-top: 30px;
 	margin-left: 7.5%;
 	margin-right: 7.5%;
 	margin-bottom: 50px;
+	padding-bottom:100px;
 	width: 85%;
 }
 
@@ -95,4 +95,14 @@ img {
 	display: flex;
 	justify-content: center;
 	width: 120%;
+}
+
+#gradient2 {
+	background-image: url(images/halftone02.png);
+	background-size: 120%;
+	background-repeat: no-repeat;
+}
+
+#black_bg {
+	background-color:black;
 }
