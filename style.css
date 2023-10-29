@@ -1,5 +1,5 @@
 :root {
-	--main-color1: White; /* Background */
+	--main-color1: white; /* Background */
 	--main-color2: black; /* text - essentially black */
 }
 
@@ -16,11 +16,11 @@ body {
 }
 
 h1 {
-	font-size:12vw;
-	margin-right:20px;
+	font-size: 12vw;
+	margin-right: 20px;
 	margin-left: 10px;
-	margin-top:70px;
-	margin-bottom:10px;
+	margin-top: 70px;
+	margin-bottom: 10px;
 }
 
 h2 {
@@ -43,6 +43,11 @@ a {
 	text-decoration: none;
 }
 
+hr {
+	width: 90%;
+	border-width: 1px;
+}
+
 img {
 	width: 100%;
 	object-fit: cover;
@@ -58,7 +63,7 @@ img {
 	margin-left: 6%;
 	margin-right: 6%;
 	margin-bottom: 100px; 
-	padding-bottom: 5%;
+	padding-bottom: 12%;
 	width: 88%;
 }
 .content {
@@ -66,6 +71,7 @@ img {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 500px 500px 500px; 
 	gap: 11px;
+	margin-top: 150px;
 	margin-left: 7.5%;
 	margin-right: 7.5%;
 	margin-bottom: 50px;
@@ -91,23 +97,6 @@ img {
 #hello {
 	padding-bottom: 20%;
 }
-
-#gradient {
-	display: flex;
-	justify-content: center;
-	width: 120%;
-}
-
-#gradient2 {
-	background-image: url(images/halftone02.png);
-	background-size: 120%;
-	background-repeat: no-repeat;
-}
-
-#black_bg {
-	background-color:black;
-}
-
 
 /* Scroll bar styling*/
 
