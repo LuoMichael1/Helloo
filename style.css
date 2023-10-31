@@ -142,9 +142,7 @@ img {
 }
 
 ::-webkit-scrollbar-track {
-	background-color: black;
-	border-left: 3px solid white;
-	border-right: 3px solid white;
+	background-color: white;
 }
 
 ::-webkit-scrollbar-thumb {
