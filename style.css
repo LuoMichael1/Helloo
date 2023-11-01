@@ -91,6 +91,15 @@ img {
 	height: 100%;
 }
 
+#sketches > div {
+	border: 2px solid black;
+	background-size: 100%;
+}
+#sketches > div > h3 {
+	color: black;
+}
+
+
 .content > div > h3 {
 	display: inline-block; align-self: flex-end;
 	font-size: 40px;
