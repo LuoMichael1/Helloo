@@ -91,6 +91,21 @@ img {
 	display: flex;
 	height: 100%;
 }
+.pictureFilter {
+	display: grid;
+	grid-template-columns: 0.5% 1fr;
+	margin-left: 3%;
+}
+
+.pictureFilter > h2 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 2%;
+	padding: 2px;
+}
+#selected {
+	background-color: #FF4A80;
+}
 
 #sketches > div {
 	border: 2px solid black;
