@@ -117,11 +117,16 @@ img {
 
 
 .content > div > h3 {
-	display: inline-block; align-self: flex-end;
-	font-size: 30px;
+	display: inline-block; 
+	align-self: flex-end;
+	font-size: 120%;
 	margin: 20px;
 	margin-top: 430px;
 	color: var(--main-color1);
+}
+#date {
+	justify-content: space-around;
+	
 }
 
 #hello {
