@@ -64,7 +64,7 @@ img {
 	margin-top: 4%;
 	margin-left: 6%;
 	margin-right: 6%;
-	margin-bottom: 100px; 
+	margin-bottom: 5%; 
 	padding-bottom: 12%;
 	width: 88%;
 }
@@ -83,7 +83,7 @@ img {
 }
 
 .content > div {
-	border-radius: 25px;
+	border-radius: 20px;
 	background-color: #EFF7F6;
 	background-size: 200%;
 	background-position: center;
@@ -108,10 +108,10 @@ img {
 }
 
 #sketches {
-	border: 2px solid black;
+	border: 1px solid black;
 	background-size: 100% !important;
 }
-#sketches > div > h3 {
+#sketches > h3 {
 	color: black;
 }
 
