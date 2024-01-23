@@ -107,9 +107,9 @@ img {
 	background-color: #FF4A80;
 }
 
-#sketches > div {
+#sketches {
 	border: 2px solid black;
-	background-size: 100%;
+	background-size: 100% !important;
 }
 #sketches > div > h3 {
 	color: black;
