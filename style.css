@@ -114,7 +114,17 @@ img {
 #sketches > h3 {
 	color: black;
 }
+/*#butterfly0 {
+	width: 50px;
+	rotate: 60deg;
 
+	animation: flap 566.66ms, move 10s;
+	/*animation-duration: 566.66ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	position: absolute;
+
+}*/
 
 .content > div > h3 {
 	display: inline-block; 
@@ -212,4 +222,85 @@ img {
 }
 #itemP {
 	grid-area: p;
+}
+
+/*-------------------------------------*/
+@keyframes move {
+	0% {left: -5%;}
+	100% {left: 100%;}
+}
+@keyframes flap0 {
+	0% {top: 50px;} 
+	59% {top: 30px;}
+	100% {top: 50px;}
+}
+@keyframes flap1 {
+	0% {top: 100px;} 
+	59% {top: 80px;}
+	100% {top: 100px;}
+}
+@keyframes flap2 {
+	0% {top: 150px;} 
+	59% {top: 130px;}
+	100% {top: 150px;}
+}
+@keyframes flap3 {
+	0% {top: 200px;} 
+	59% {top: 180px;}
+	100% {top: 200px;}
+}
+@keyframes flap4 {
+	0% {top: 250px;} 
+	59% {top: 230px;}
+	100% {top: 250px;}
+}
+@keyframes flap5 {
+	0% {top: 300px;} 
+	59% {top: 280px;}
+	100% {top: 300px;}
+}
+@keyframes flap6 {
+	0% {top: 350px;} 
+	59% {top: 330px;}
+	100% {top: 350px;}
+}
+@keyframes flap7 {
+	0% {top: 400px;} 
+	59% {top: 380px;}
+	100% {top: 400px;}
+}
+@keyframes flap8 {
+	0% {top: 450px;} 
+	59% {top: 430px;}
+	100% {top: 450px;}
+}
+@keyframes flap9 {
+	0% {top: 500px;} 
+	59% {top: 480px;}
+	100% {top: 500px;}
+}
+@keyframes flap10 {
+	0% {top: 550px;} 
+	59% {top: 530px;}
+	100% {top: 550px;}
+}
+@keyframes flap11 {
+	0% {top: 600px;} 
+	59% {top: 580px;}
+	100% {top: 600px;}
+}
+@keyframes flap12 {
+	0% {top: 650px;} 
+	59% {top: 630px;}
+	100% {top: 650px;}
+}
+@keyframes flap13 {
+	0% {top: 700px;} 
+	59% {top: 680px;}
+	100% {top: 700px;}
+}
+@keyframes flap14 {
+	0% {top: 750px;} 
+	59% {top: 730px;}
+	100% {top: 750px;}
 }

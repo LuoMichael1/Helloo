@@ -1,9 +1,11 @@
 let window_width = window.innerWidth;
 let tile_width;
+let number_butterflys = 0;
 
-function hello() {
-    document.getElementById("test").style.color = "red";
-    //getWidth();
+const butterfly = {
+    xpos: 0,
+    ypos: 0,
+
 }
 
 function getWidth() {
@@ -13,16 +15,11 @@ function getWidth() {
         window_width = window.innerWidth;
         changeWidth();
     }).observe(document.body)
-
-    
 }
 
 
 
-function changeWidth() {
-    
-
-
+function changeWidth() {    
     tile_width = window_width*0.8;
 
     if (tile_width > 700) {
@@ -41,5 +38,29 @@ function changeWidth() {
         
         document.getElementById("renders").style.gridTemplateRows = tile_width + 'px '+ tile_width + 'px '  + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
     }
-
 }
+
+
+function addButterflys() {
+    number_butterflys = 15;
+    console.log("hello");
+    for (let i = 0; i < number_butterflys; i++) {
+        let delay = i*1000
+        setTimeout(setButterFly(i), delay);
+    }
+    
+}
+function setButterFly(butterID) {
+    let time = Math.random()*9;
+    let size = 30 + Math.random()*100;
+    let frame = Math.floor(Math.random()*7);
+    let delay = frame*7
+    console.log(frame);
+    document.getElementById("butterflys").innerHTML += '<img class="test" id="butterfly'+butterID+'" src="images/butterfly'+frame+'.gif">';
+    document.getElementById("butterfly" + butterID).style.width = ''+size+'px';
+    document.getElementById("butterfly" + butterID).style.position = 'absolute';
+    document.getElementById("butterfly" + butterID).style.rotate = '60deg';
+    document.getElementById("butterfly" + butterID).style.animation = 'flap'+butterID+' 566.66ms linear '+delay+"ms"+' infinite, move 1'+time+'s linear infinite';
+}
+
+
