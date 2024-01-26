@@ -61,6 +61,7 @@ function setButterFly(butterID) {
     document.getElementById("butterfly" + butterID).style.position = 'absolute';
     document.getElementById("butterfly" + butterID).style.rotate = '60deg';
     document.getElementById("butterfly" + butterID).style.animation = 'flap'+butterID+' 566.66ms linear '+delay+"ms"+' infinite, move 1'+time+'s linear infinite';
+    document.getElementById("butterfly" + butterID).style.mixBlendMode = 'difference';
 }
 
 
