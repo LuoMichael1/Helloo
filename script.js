@@ -56,7 +56,7 @@ function setButterFly(butterID) {
     let frame = Math.floor(Math.random()*7);
     let delay = frame*7
     console.log(frame);
-    document.getElementById("butterflys").innerHTML += '<img class="test" id="butterfly'+butterID+'" src="images/butterfly'+frame+'.gif">';
+    document.getElementById("butterflys").innerHTML += '<img class="test" id="butterfly'+butterID+'" alt="" src="images/butterfly'+frame+'.gif">';
     document.getElementById("butterfly" + butterID).style.width = ''+size+'px';
     document.getElementById("butterfly" + butterID).style.position = 'absolute';
     document.getElementById("butterfly" + butterID).style.rotate = '60deg';
