@@ -54,7 +54,7 @@ function setButterFly(butterID) {
     let time = Math.random()*9;
     let size = 30 + Math.random()*100;
     let frame = Math.floor(Math.random()*7);
-    let delay = Math.floor(Math.random()*5);
+    let delay = Math.floor(Math.random()*10);
     console.log(delay);
     document.getElementById("butterflys").innerHTML += '<img class="test" id="butterfly'+butterID+'" alt="" src="images/butterfly'+frame+'.gif">';
     document.getElementById("butterfly" + butterID).style.width = ''+size+'px';
