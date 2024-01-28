@@ -1,24 +1,14 @@
 let window_width = window.innerWidth;
 let tile_width;
-let number_butterflys = 0;
-
-const butterfly = {
-    xpos: 0,
-    ypos: 0,
-
-}
+let number_butterflys = 15;
 
 function getWidth() {
-    console.log(window_width);
 
     new ResizeObserver(() => {
         window_width = window.innerWidth;
         changeWidth();
     }).observe(document.body)
 }
-
-
-
 function changeWidth() {    
     tile_width = window_width*0.8;
 
@@ -32,7 +22,6 @@ function changeWidth() {
     }
     else {
         tile_width /= 2;
-        //tile_width -=;
         document.getElementById("renders").style.gridTemplateColumns = tile_width + 'px ' + tile_width + 'px';
         document.getElementById("renders").style.gridTemplateAreas = "'" + "a b' " + "'" + "c d' " + "'" + "e e' " + "'" + "e e' " + "'" + "f g' " + "'" + "f h' " + "'" + "i k' " + "'" + "j k' " + "'" + "l m' " + "'" + "n o' ";
         
@@ -42,26 +31,19 @@ function changeWidth() {
 
 
 function addButterflys() {
-    number_butterflys = 15;
-    console.log("hello");
     for (let i = 0; i < number_butterflys; i++) {
-        let delay = i*1000
-        setTimeout(setButterFly(i), delay);
+        setButterFly(i);
     }
-    
 }
 function setButterFly(butterID) {
     let time = Math.random()*9;
     let size = 30 + Math.random()*100;
     let frame = Math.floor(Math.random()*7);
-    let delay = Math.floor(Math.random()*10);
-    console.log(delay);
-    document.getElementById("butterflys").innerHTML += '<img class="test" id="butterfly'+butterID+'" alt="" src="images/butterfly'+frame+'.gif">';
+
+    document.getElementById("butterflys").innerHTML += '<img class="butterfly" id="butterfly'+butterID+'" alt="" src="images/butterfly'+frame+'.gif">';
     document.getElementById("butterfly" + butterID).style.width = ''+size+'px';
-    document.getElementById("butterfly" + butterID).style.position = 'absolute';
     document.getElementById("butterfly" + butterID).style.rotate = 60+frame+'deg';
     document.getElementById("butterfly" + butterID).style.animation = 'flap'+butterID+' 566.66ms linear infinite, move 1'+time+'s linear infinite -'+frame+"s";
-    document.getElementById("butterfly" + butterID).style.mixBlendMode = 'difference';
 }
 
 

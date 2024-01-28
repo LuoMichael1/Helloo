@@ -118,17 +118,10 @@ img {
 #sketches > h3 {
 	color: black;
 }
-/*#butterfly0 {
-	width: 50px;
-	rotate: 60deg;
-
-	animation: flap 566.66ms, move 10s;
-	/*animation-duration: 566.66ms;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+.butterfly {
 	position: absolute;
-
-}*/
+	mix-blend-mode: difference;
+}
 
 .content > div > h3 {
 	display: inline-block; 
