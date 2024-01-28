@@ -2,7 +2,11 @@
 	--main-color1: white; /* Background */
 	--main-color2: black; /* text - essentially black */
 }
-
+@font-face {
+	font-family: Lexend;
+	src: url("https://fonts.googleapis.com/css2?family=Lexend");
+	font-display: swap;
+}
 
 html {
 	background-color: var(--main-color1);
