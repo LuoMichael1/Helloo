@@ -54,13 +54,13 @@ function setButterFly(butterID) {
     let time = Math.random()*9;
     let size = 30 + Math.random()*100;
     let frame = Math.floor(Math.random()*7);
-    let delay = frame*7
-    console.log(frame);
+    let delay = Math.floor(Math.random()*5);
+    console.log(delay);
     document.getElementById("butterflys").innerHTML += '<img class="test" id="butterfly'+butterID+'" alt="" src="images/butterfly'+frame+'.gif">';
     document.getElementById("butterfly" + butterID).style.width = ''+size+'px';
     document.getElementById("butterfly" + butterID).style.position = 'absolute';
-    document.getElementById("butterfly" + butterID).style.rotate = '60deg';
-    document.getElementById("butterfly" + butterID).style.animation = 'flap'+butterID+' 566.66ms linear '+delay+"ms"+' infinite, move 1'+time+'s linear infinite';
+    document.getElementById("butterfly" + butterID).style.rotate = 60+frame+'deg';
+    document.getElementById("butterfly" + butterID).style.animation = 'flap'+butterID+' 566.66ms linear infinite, move 1'+time+'s linear infinite -'+frame+"s";
     document.getElementById("butterfly" + butterID).style.mixBlendMode = 'difference';
 }
 

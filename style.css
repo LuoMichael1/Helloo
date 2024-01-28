@@ -227,7 +227,7 @@ img {
 /*-------------------------------------*/
 @keyframes move {
 	0% {transform: translateY(440px)}
-	100% {transform: translateY(-1600px)}
+	100% {transform: translateY(-2000px)}
 }
 @keyframes flap0 {
 	0% {top: 50px;} 
