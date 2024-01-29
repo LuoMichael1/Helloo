@@ -75,7 +75,7 @@ img {
 	padding-bottom: 15.5%;
 	width: 88%;
 }
-@media (width <= 750px) {
+@media (orientation: portrait) {
 	.banner {
 		grid-template-columns: 1fr;
 		padding-bottom: 5%;
