@@ -79,6 +79,7 @@ img {
 	.banner {
 		grid-template-columns: 1fr;
 		padding-bottom: 5%;
+		
 	}
 	nav {
 		margin-top: 10px;
@@ -91,8 +92,13 @@ img {
 	h2 {
 		font-size: 3.4vw;
 	}
+	.content > div {
+		border-radius: 12px !important;
+	}
 	.content > div > h3 {
 		font-size: 1.9vw !important;
+		margin: 15px !important;
+		margin-bottom: 8px !important;
 	}
 }
 
@@ -123,6 +129,7 @@ img {
 	align-self: flex-end;
 	font-size: 1vw;
 	margin: 20px;
+	margin-bottom: 15px;
 	margin-top: 430px;
 	color: var(--main-color1);
 	font-weight: 400;
@@ -161,7 +168,7 @@ img {
 
 #date {
 	display: block;
-	margin-left: auto;
+	margin-left: auto !important;
 }
 
 #hello {
