@@ -20,12 +20,17 @@ function changeWidth() {
 
         document.getElementById("renders").style.gridTemplateRows = tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
     }
-    else {
+    else if (tile_width > 350) {
         tile_width /= 2;
         document.getElementById("renders").style.gridTemplateColumns = tile_width + 'px ' + tile_width + 'px';
         document.getElementById("renders").style.gridTemplateAreas = "'" + "a b' " + "'" + "c d' " + "'" + "e e' " + "'" + "e e' " + "'" + "f g' " + "'" + "f h' " + "'" + "i k' " + "'" + "j k' " + "'" + "l m' " + "'" + "n o' ";
         
         document.getElementById("renders").style.gridTemplateRows = tile_width + 'px '+ tile_width + 'px '  + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
+    }
+    else {
+        document.getElementById("renders").style.gridTemplateColumns = tile_width + 'px';
+        document.getElementById("renders").style.gridTemplateRows = 'repeat(12,' + tile_width + 'px)';
+        document.getElementById("renders").style.gridTemplateAreas = "'a' 'b' 'c' 'd' 'e' 'f' 'g' 'h' 'i' 'j' 'k' 'l'"
     }
 }
 

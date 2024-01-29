@@ -91,7 +91,11 @@ img {
 	h2 {
 		font-size: 3.4vw;
 	}
+	.content > div > h3 {
+		font-size: 1.9vw !important;
+	}
 }
+
 .content {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -117,7 +121,7 @@ img {
 .content > div > h3 {
 	display: inline-block; 
 	align-self: flex-end;
-	font-size: 90%;
+	font-size: 1vw;
 	margin: 20px;
 	margin-top: 430px;
 	color: var(--main-color1);
