@@ -1,12 +1,16 @@
 :root {
 	--main-color1: white; /* Background */
 	--main-color2: black; /* text - essentially black */
+	--highlight-color: #FF4A80;
 }
+
+/*Text loads while font is loading to speed page load*/
 @font-face {
-	font-family: Lexend;
+	font-family: "Lexend", sans-serif;
 	src: url("https://fonts.googleapis.com/css2?family=Lexend");
 	font-display: swap;
 }
+  
 
 html {
 	background-color: var(--main-color1);
@@ -22,14 +26,14 @@ body {
 h1 {
 	font-size: 12vw;
 	margin-right: 20px;
-	margin-left: 10px;
+	margin-left: 0.5vw;
 	margin-top: 70px;
 	margin-bottom: 10px;
 }
 
 h2 {
 	font-size:1.7vw;
-	margin-left:30px;
+	margin-left: 1.6vw;
 	margin-top:10px;
 }
 
@@ -51,15 +55,14 @@ img {
 	width: 100%;
 	object-fit: cover;
 	overflow: clip;
-
 }
 
-.line {
+/*.line {
 	border-top: solid;
 	border-width: 2px;
 	width:90%;
 	margin-left:5%;
-}
+}*/
 
 .banner {
 	display: grid;
@@ -69,8 +72,25 @@ img {
 	margin-left: 6%;
 	margin-right: 6%;
 	margin-bottom: 5%; 
-	padding-bottom: 12%;
+	padding-bottom: 15.5%;
 	width: 88%;
+}
+@media (width <= 750px) {
+	.banner {
+		grid-template-columns: 1fr;
+		padding-bottom: 5%;
+	}
+	nav {
+		margin-top: 10px;
+		margin-left: 0;
+		text-align: left;
+	}
+	h1 {
+		font-size: 20vw;
+	}
+	h2 {
+		font-size: 3.4vw;
+	}
 }
 .content {
 	display: grid;
@@ -78,14 +98,13 @@ img {
 	grid-template-rows: 460px 460px 460px;
 	
 	gap: 11px;
-	margin-top: 150px;
+	margin-top: 5em;
 	margin-left: 10%;
 	margin-right: 10%;
 	margin-bottom: 50px;
 	padding-bottom: 100px;
 	width: 80%;
 }
-
 .content > div {
 	border-radius: 20px;
 	background-color: #EFF7F6;
@@ -95,12 +114,23 @@ img {
 	display: flex;
 	height: 100%;
 }
+.content > div > h3 {
+	display: inline-block; 
+	align-self: flex-end;
+	font-size: 90%;
+	margin: 20px;
+	margin-top: 430px;
+	color: var(--main-color1);
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Swap between Home, Renders, and Illustrations */
 .pictureFilter {
 	display: grid;
 	grid-template-columns: 0.5% 1fr;
 	margin-left: 3%;
 }
-
 .pictureFilter > h2 {
 	margin-top: 5px;
 	margin-bottom: 5px;
@@ -108,7 +138,7 @@ img {
 	padding: 2px;
 }
 #selected {
-	background-color: #FF4A80;
+	background-color: var(--highlight-color);
 }
 
 #sketches {
@@ -121,19 +151,13 @@ img {
 .butterfly {
 	position: absolute;
 	mix-blend-mode: difference;
+	filter: brightness(1.7) hue-rotate(110deg) invert();
 }
 
-.content > div > h3 {
-	display: inline-block; 
-	align-self: flex-end;
-	font-size: 120%;
-	margin: 20px;
-	margin-top: 430px;
-	color: var(--main-color1);
-}
+
 #date {
-	justify-content: space-around;
-	
+	display: block;
+	margin-left: auto;
 }
 
 #hello {
@@ -141,26 +165,21 @@ img {
 }
 
 /* Scroll bar styling*/
-
 ::-webkit-scrollbar {
 	width: 10px;
 }
-
 ::-webkit-scrollbar-track {
 	background-color: black;
 	border-left: 3px solid white;
 	border-right: 3px solid white;
 }
-
 ::-webkit-scrollbar-thumb {
 	border-radius: 4px;
-	background-color: #FF4A80;
+	background-color: var(--highlight-color);
 }
 
 
-
-
-/* Grid Areas*/
+/* Grid Areas (moved to js) */
 #renders {
 	grid-template-areas:
 		'a b c'
@@ -221,83 +240,13 @@ img {
 	grid-area: p;
 }
 
-/*-------------------------------------*/
+/* -------------- Butterfly animation -----------------*/
 @keyframes move {
 	0% {transform: translateY(440px)}
 	100% {transform: translateY(-2000px)}
 }
-@keyframes flap0 {
-	0% {top: 50px;} 
-	59% {top: 30px;}
-	100% {top: 50px;}
-}
-@keyframes flap1 {
-	0% {top: 100px;} 
-	59% {top: 80px;}
-	100% {top: 100px;}
-}
-@keyframes flap2 {
-	0% {top: 150px;} 
-	59% {top: 130px;}
-	100% {top: 150px;}
-}
-@keyframes flap3 {
-	0% {top: 200px;} 
-	59% {top: 180px;}
-	100% {top: 200px;}
-}
-@keyframes flap4 {
-	0% {top: 250px;} 
-	59% {top: 230px;}
-	100% {top: 250px;}
-}
-@keyframes flap5 {
-	0% {top: 300px;} 
-	59% {top: 280px;}
-	100% {top: 300px;}
-}
-@keyframes flap6 {
-	0% {top: 350px;} 
-	59% {top: 330px;}
-	100% {top: 350px;}
-}
-@keyframes flap7 {
-	0% {top: 400px;} 
-	59% {top: 380px;}
-	100% {top: 400px;}
-}
-@keyframes flap8 {
-	0% {top: 450px;} 
-	59% {top: 430px;}
-	100% {top: 450px;}
-}
-@keyframes flap9 {
-	0% {top: 500px;} 
-	59% {top: 480px;}
-	100% {top: 500px;}
-}
-@keyframes flap10 {
-	0% {top: 550px;} 
-	59% {top: 530px;}
-	100% {top: 550px;}
-}
-@keyframes flap11 {
-	0% {top: 600px;} 
-	59% {top: 580px;}
-	100% {top: 600px;}
-}
-@keyframes flap12 {
-	0% {top: 650px;} 
-	59% {top: 630px;}
-	100% {top: 650px;}
-}
-@keyframes flap13 {
-	0% {top: 700px;} 
-	59% {top: 680px;}
-	100% {top: 700px;}
-}
-@keyframes flap14 {
-	0% {top: 750px;} 
-	59% {top: 730px;}
-	100% {top: 750px;}
+@keyframes flap {
+	0% {top: calc(50px * var(--order));} 
+	59% {top: calc(50px * var(--order) - 15px);}
+	100% {top: calc(50px * var(--order));}
 }
