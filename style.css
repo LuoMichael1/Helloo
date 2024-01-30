@@ -57,13 +57,6 @@ img {
 	overflow: clip;
 }
 
-/*.line {
-	border-top: solid;
-	border-width: 2px;
-	width:90%;
-	margin-left:5%;
-}*/
-
 .banner {
 	display: grid;
 	grid-template-columns: auto 1fr;
@@ -118,7 +111,7 @@ img {
 .content > div {
 	border-radius: 20px;
 	background-color: #EFF7F6;
-	background-size: 200%;
+	background-size: 180%;
 	background-position: center;
 	background-repeat: no-repeat;
 	display: flex;
@@ -201,63 +194,49 @@ img {
 		'l m k'
 		'n o p';
 }
-
-#itemA {
-	grid-area: a;
-}
-#itemB {
-	grid-area: b;
-}
-#itemC {
-	grid-area: c;
-}
-#itemD {
-	grid-area: d;
-}
-#itemE {
-	grid-area: e;
-}
-#itemF {
-	grid-area: f;
-}
-#itemG {
-	grid-area: g;
-}
-#itemH {
-	grid-area: h;
-}
-#itemI {
-	grid-area: i;
-}
-#itemJ {
-	grid-area: j;
-}
-#itemK {
-	grid-area: k;
-}
-#itemL {
-	grid-area: l;
-}
-#itemM {
-	grid-area: m;
-}
-#itemN {
-	grid-area: n;
-}
-#itemO {
-	grid-area: o;
-}
-#itemP {
-	grid-area: p;
+#renders > div {
+	grid-area: var(--gridPos);
 }
 
-/* -------------- Butterfly animation -----------------*/
+
 @keyframes move {
-	0% {transform: translateY(440px)}
-	100% {transform: translateY(-2000px)}
+	0% {transform: translateY(1000px);}
+	100% {transform: translateY(2000px);}
 }
-@keyframes flap {
-	0% {top: calc(50px * var(--order));} 
-	59% {top: calc(50px * var(--order) - 15px);}
-	100% {top: calc(50px * var(--order));}
+
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+		transform: translateY(30px);
+		filter: blur(4px);
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+	.hidden {
+		opacity: 0;
+	}
+	.reveal {
+		animation: fadeIn 1.2s ease 1;
+	}
+	.reveal2 {
+		animation: fadeIn 2s ease 1;
+	}
+
+
+	/* -------------- Butterfly animation -----------------*/
+	@keyframes move {
+		0% {transform: translateY(440px);}
+		100% {transform: translateY(-2000px);}
+	}
+	@keyframes flap {
+		0% {top: calc(50px * var(--order));} 
+		59% {top: calc(50px * var(--order) - 15px);}
+		100% {top: calc(50px * var(--order));}
+	}
 }

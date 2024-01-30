@@ -3,7 +3,6 @@ let tile_width;
 let number_butterflys = 15;
 
 function getWidth() {
-
     new ResizeObserver(() => {
         window_width = window.innerWidth;
         changeWidth();
@@ -27,7 +26,6 @@ function changeWidth() {
     }
 }
 
-
 function addButterflys() {
     for (let i = 0; i < number_butterflys; i++) {
         setButterFly(i);
@@ -38,10 +36,21 @@ function setButterFly(butterID) {
     let size = 30 + Math.random()*100;
     let frame = Math.floor(Math.random()*7);
 
-    document.getElementById("butterflys").innerHTML += '<img draggable="false" class="butterfly" id="butterfly'+butterID+'" style="--order: '+butterID+'" alt="" src="images/butterfly'+frame+'.gif">';
+    document.getElementById("butterflys").innerHTML += '<img draggable="false" class="butterfly" id="butterfly'+butterID+'" style="--order: '+butterID+'" alt="" src="imageshello/butterfly'+frame+'.gif">';
     document.getElementById("butterfly" + butterID).style.width = ''+size+'px';
     document.getElementById("butterfly" + butterID).style.rotate = 60+frame+'deg';
     document.getElementById("butterfly" + butterID).style.animation = 'flap'+' 566.66ms linear infinite, move 1'+time+'s linear infinite -'+frame+"s";
 }
 
-
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('reveal');
+            entry.target.classList.remove('hidden');
+        }
+    });
+});
+function addObservers() {
+    const hiddenElements = document.querySelectorAll(".hidden");
+    hiddenElements.forEach((el) => observer.observe(el));   
+}
