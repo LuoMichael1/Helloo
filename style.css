@@ -111,7 +111,7 @@ img {
 .content > div {
 	border-radius: 20px;
 	background-color: #EFF7F6;
-	background-size: 180%;
+	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	display: flex;
