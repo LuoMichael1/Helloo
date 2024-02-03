@@ -1,6 +1,6 @@
 :root {
 	--main-color1: white; /* Background */
-	--main-color2: black; /* text - essentially black */
+	--main-color2: black; /* text */
 	--highlight-color: #FF4A80;
 }
 
@@ -10,7 +10,17 @@
 	src: url("https://fonts.googleapis.com/css2?family=Lexend");
 	font-display: swap;
 }
-  
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-color1: rgb(20 20 20); /* Background */
+		--main-color2: rgb(200 200 200); /* text */
+		--highlight-color: #00df89;
+	}
+	.content > div {
+		filter: saturate(0.8);
+		filter: brightness(0.7)
+	}
+}
 
 html {
 	background-color: var(--main-color1);
@@ -177,9 +187,9 @@ img {
 	width: 10px;
 }
 ::-webkit-scrollbar-track {
-	background-color: black;
-	border-left: 3px solid white;
-	border-right: 3px solid white;
+	background-color: var(--main-color2);
+	border-left: 3px solid var(--main-color1);
+	border-right: 3px solid var(--main-color1);
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 4px;
@@ -244,4 +254,15 @@ img {
 		59% {top: calc(50px * var(--order) - 15px);}
 		100% {top: calc(50px * var(--order));}
 	}
+}
+
+
+#theme_Select {
+	background-color: var(--highlight-color);
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	position: absolute;
+	bottom: 50px;
+	right: 60px;
 }

@@ -2,6 +2,9 @@ let window_width = window.innerWidth;
 let tile_width;
 let number_butterflys = 15;
 
+let root;
+let theme = -1;
+
 function getWidth() {
     new ResizeObserver(() => {
         window_width = window.innerWidth;
@@ -53,4 +56,23 @@ const observer = new IntersectionObserver((entries) => {
 function addObservers() {
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el));   
+}
+
+function changeTheme() {
+    root = document.querySelector(':root');
+
+    if (theme != 0) {
+        root.style.setProperty('--main-color1', 'rgb(20 20 20)');
+        root.style.setProperty('--main-color2', 'rgb(200 200 200)');
+        root.style.setProperty('--highlight-color', '#00df89');
+        theme = 0;
+    }
+    else if (theme == 0) {
+        root.style.setProperty('--main-color1', 'white');
+        root.style.setProperty('--main-color2', 'black');
+        root.style.setProperty('--highlight-color', '#FF4A80');
+        theme = 1;
+    }
+
+    console.log("hello");
 }
