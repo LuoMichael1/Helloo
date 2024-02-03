@@ -116,6 +116,10 @@ img {
 	background-repeat: no-repeat;
 	display: flex;
 	height: 100%;
+	transition: filter 0.9s ease;
+}
+.content > div:hover {
+	filter: opacity(0.8);
 }
 .content > div > h3 {
 	display: inline-block; 
