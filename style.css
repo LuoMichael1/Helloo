@@ -69,6 +69,7 @@ img {
 	padding-bottom: 15.5%;
 	width: 88%;
 }
+/* for phones mostly*/
 @media (orientation: portrait) {
 	.banner {
 		grid-template-columns: 1fr;
@@ -96,6 +97,18 @@ img {
 	}
 	.material-symbols-outlined {
 		font-size: 3.4vw !important;
+	}
+
+	/*slightly reduced animation*/
+	@keyframes fadeIn {
+		0% {
+			opacity: 0;
+			transform: translateY(18px);
+			filter: blur(2px);
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 }
 
@@ -153,6 +166,7 @@ img {
 	background-color: var(--highlight-color);
 }
 
+/* styling for the boxes on the sketches page*/
 #sketches {
 	border: 1px solid black;
 	background-size: 100% !important;
@@ -160,6 +174,8 @@ img {
 #sketches > h3 {
 	color: black;
 }
+
+
 .butterfly {
 	position: absolute;
 	mix-blend-mode: difference;
