@@ -247,6 +247,7 @@ img {
 	}
 	.reveal {
 		animation: fadeIn 1.2s ease 1;
+		animation-fill-mode: both;
 	}
 	.reveal2 {
 		animation: fadeIn 2s ease 1;
