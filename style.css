@@ -4,16 +4,16 @@
 	--highlight-color: #FF4A80;
 }
 
-/*Text loads while font is loading to speed page load*/
+
 @font-face {
-	font-family: "Lexend", sans-serif;
 	src: url("https://fonts.googleapis.com/css2?family=Lexend");
 	font-display: swap;
+	font-family: "Lexend", sans-serif;
 }
 
 html {
 	background-color: var(--main-color1);
-	font-family: Lexend, helvetica, Sans-serif;
+	font-family: "Lexend", sans-serif;
 	color: var(--main-color2);
 }
 
@@ -250,7 +250,7 @@ img {
 	background-color: var(--highlight-color);
 	width: 30px;
 	height: 30px;
-	border-radius: 15px;
+	border-radius: 50%;
 	position: absolute;
 	bottom: 50px;
 	right: 60px;
