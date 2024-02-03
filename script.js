@@ -4,6 +4,7 @@ let number_butterflys = 15;
 
 let root;
 let theme = -1;
+let x;
 
 function getWidth() {
     new ResizeObserver(() => {
@@ -56,23 +57,50 @@ const observer = new IntersectionObserver((entries) => {
 function addObservers() {
     const hiddenElements = document.querySelectorAll(".hidden");
     hiddenElements.forEach((el) => observer.observe(el));   
+
+    themeSetup();
+}
+
+
+
+function themeSetup() {
+    root = document.querySelector(':root');
+
+    if (localStorage.getItem("theme") == "0") {
+        localStorage.setItem("theme", "1")
+        changeTheme();
+    }
+    else {
+        localStorage.setItem("theme", "1");
+    }
+    console.log(localStorage.getItem("theme"));
+    console.log("hi");
 }
 
 function changeTheme() {
-    root = document.querySelector(':root');
-
-    if (theme != 0) {
+    if (localStorage.getItem("theme") == "1") {
         root.style.setProperty('--main-color1', 'rgb(20 20 20)');
         root.style.setProperty('--main-color2', 'rgb(200 200 200)');
         root.style.setProperty('--highlight-color', '#00df89');
-        theme = 0;
+
+        if (document.querySelector('.content') != null) {
+            x = document.querySelector('.content > div')
+            x.style.filter = 'saturate(0.8)';
+            x.style.filter = 'brightness(0.7)';
+        }        
+        localStorage.setItem("theme", "0");
     }
-    else if (theme == 0) {
+    else if (localStorage.getItem("theme") == "0") {
         root.style.setProperty('--main-color1', 'white');
         root.style.setProperty('--main-color2', 'black');
         root.style.setProperty('--highlight-color', '#FF4A80');
-        theme = 1;
+        localStorage.setItem("theme", "1");
     }
 
     console.log("hello");
+}
+
+function indexLoad() {
+    themeSetup();
+    addButterflys();
 }
