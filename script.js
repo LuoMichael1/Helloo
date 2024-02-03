@@ -18,15 +18,15 @@ function changeWidth() {
     if (tile_width > 700) {
         tile_width /= 3;
         tile_width -= 11;
-        document.getElementById("renders").style.gridTemplateColumns = tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
+        document.getElementById("renders").style.gridTemplateColumns = 'repeat(3, '+ tile_width + 'px)';
         document.getElementById("renders").style.gridTemplateAreas = "'" + "a b c' " + "'" + "d e e' " + "'" + "f e e' " + "'" + "f g h' " + "'" + "i j k' " + "'" + "l m k' " + "'" + "n o p' ";
-        document.getElementById("renders").style.gridTemplateRows = tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
+        document.getElementById("renders").style.gridTemplateRows = 'repeat(7, '+ tile_width + 'px)';
     }
     else {
         tile_width /= 2;
-        document.getElementById("renders").style.gridTemplateColumns = tile_width + 'px ' + tile_width + 'px';
+        document.getElementById("renders").style.gridTemplateColumns = 'repeat(2, '+ tile_width + 'px)';
         document.getElementById("renders").style.gridTemplateAreas = "'" + "a b' " + "'" + "c d' " + "'" + "e e' " + "'" + "e e' " + "'" + "f g' " + "'" + "f h' " + "'" + "i k' " + "'" + "j k' " + "'" + "l m' " + "'" + "n o' "+ "'" + "p q' ";
-        document.getElementById("renders").style.gridTemplateRows = tile_width + 'px ' + tile_width + 'px '+ tile_width + 'px '  + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
+        document.getElementById("renders").style.gridTemplateRows = 'repeat(11, '+ tile_width + 'px)';
     }
 }
 
@@ -73,8 +73,6 @@ function themeSetup() {
     else {
         localStorage.setItem("theme", "1");
     }
-    console.log(localStorage.getItem("theme"));
-    console.log("hi");
 }
 
 function changeTheme() {
@@ -90,8 +88,6 @@ function changeTheme() {
         root.style.setProperty('--highlight-color', '#FF4A80');
         localStorage.setItem("theme", "1");
     }
-
-    console.log("hello");
 }
 
 function indexLoad() {
