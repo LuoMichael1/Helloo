@@ -25,8 +25,8 @@ function changeWidth() {
     else {
         tile_width /= 2;
         document.getElementById("renders").style.gridTemplateColumns = tile_width + 'px ' + tile_width + 'px';
-        document.getElementById("renders").style.gridTemplateAreas = "'" + "a b' " + "'" + "c d' " + "'" + "e e' " + "'" + "e e' " + "'" + "f g' " + "'" + "f h' " + "'" + "i k' " + "'" + "j k' " + "'" + "l m' " + "'" + "n o' ";
-        document.getElementById("renders").style.gridTemplateRows = tile_width + 'px '+ tile_width + 'px '  + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
+        document.getElementById("renders").style.gridTemplateAreas = "'" + "a b' " + "'" + "c d' " + "'" + "e e' " + "'" + "e e' " + "'" + "f g' " + "'" + "f h' " + "'" + "i k' " + "'" + "j k' " + "'" + "l m' " + "'" + "n o' "+ "'" + "p q' ";
+        document.getElementById("renders").style.gridTemplateRows = tile_width + 'px ' + tile_width + 'px '+ tile_width + 'px '  + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px ' + tile_width + 'px';
     }
 }
 
@@ -84,9 +84,8 @@ function changeTheme() {
         root.style.setProperty('--highlight-color', '#00df89');
 
         if (document.querySelector('.content') != null) {
-            x = document.querySelector('.content > div')
-            x.style.filter = 'saturate(0.8)';
-            x.style.filter = 'brightness(0.7)';
+            x = document.querySelectorAll('.content > div')
+            x.forEach((item) => (item).style.filter = 'brightness(0.7) saturate(0.8)');
         }        
         localStorage.setItem("theme", "0");
     }
