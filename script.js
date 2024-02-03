@@ -81,12 +81,7 @@ function changeTheme() {
     if (localStorage.getItem("theme") == "1") {
         root.style.setProperty('--main-color1', 'rgb(20 20 20)');
         root.style.setProperty('--main-color2', 'rgb(200 200 200)');
-        root.style.setProperty('--highlight-color', '#00df89');
-
-        if (document.querySelector('.content') != null) {
-            x = document.querySelectorAll('.content > div')
-            x.forEach((item) => (item).style.filter = 'brightness(0.7) saturate(0.8)');
-        }        
+        root.style.setProperty('--highlight-color', '#00df89');     
         localStorage.setItem("theme", "0");
     }
     else if (localStorage.getItem("theme") == "0") {
