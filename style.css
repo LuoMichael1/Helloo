@@ -173,7 +173,14 @@ img {
 .sketches > div > h3 {
 	color: black;
 }
-
+/*used for the home page*/
+.sketch {
+	border: 1px solid black;
+	background-size: cover;
+}
+.sketch > h3 {
+	color: black !important;
+}
 
 .butterfly {
 	position: absolute;
