@@ -114,9 +114,8 @@ img {
 
 .content {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-template-rows: 460px 460px 460px;
-	
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-flow: dense;
 	gap: 11px;
 	margin-top: 5em;
 	margin-left: 10%;
@@ -206,23 +205,6 @@ img {
 	background-color: var(--highlight-color);
 }
 
-
-/* Grid Areas (moved to js) */
-#renders {
-	grid-template-areas:
-		'a b c'
-		'd e e'
-		'f e e'
-		'f g h'
-		'i j k'
-		'l m k'
-		'n o p';
-}
-#renders > div {
-	grid-area: var(--gridPos);
-}
-
-
 @keyframes move {
 	0% {transform: translateY(1000px);}
 	100% {transform: translateY(2000px);}
@@ -277,4 +259,23 @@ img {
 	bottom: 50px;
 	right: 60px;
 	border-width: 0;
+}
+
+
+
+
+
+
+
+#_1x2 {
+	grid-row: span 2;
+	grid-column: span 1;
+}
+#_2x1 {
+	grid-row: span 1;
+	grid-column: span 2;
+}
+#_2x2 {
+	grid-row: span 2;
+	grid-column: span 2;
 }
