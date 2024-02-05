@@ -166,11 +166,11 @@ img {
 }
 
 /* styling for the boxes on the sketches page*/
-#sketches {
+.sketches > div{
 	border: 1px solid black;
-	background-size: 100% !important;
+	background-size: cover;
 }
-#sketches > h3 {
+.sketches > div > h3 {
 	color: black;
 }
 
