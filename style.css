@@ -8,7 +8,7 @@
 @font-face {
 	src: url("https://fonts.googleapis.com/css2?family=Lexend");
 	font-display: swap;
-	font-family: "Lexend", sans-serif;
+	font-family: 'Lexend', sans-serif;
 }
 .material-symbols-outlined {
 	font-size: 1.7vw !important;
@@ -92,7 +92,6 @@ img {
 	}
 	.content > div > h3 {
 		font-size: 1.9vw !important;
-		margin: 15px !important;
 		margin-bottom: 8px !important;
 	}
 	.material-symbols-outlined {
@@ -132,10 +131,20 @@ img {
 	background-repeat: no-repeat;
 	display: flex;
 	height: 100%;
-	transition: filter 0.9s ease;
+	filter: opacity(1);
+	transition: all 0.8s ease;
 }
 .content > div:hover {
 	filter: opacity(0.8);
+}
+
+@keyframes hover {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.8;
+	}
 }
 .content > div > h3 {
 	display: inline-block; 
@@ -185,12 +194,11 @@ img {
 .butterfly {
 	position: absolute;
 	mix-blend-mode: difference;
-	filter: brightness(1.7) hue-rotate(110deg) invert();
+	filter: brightness(1.7) hue-rotate(110deg) invert(1);
 }
 
 
-#date {
-	display: block;
+.date {
 	margin-left: auto !important;
 }
 
@@ -221,7 +229,7 @@ img {
 @keyframes fadeIn {
 	0% {
 		opacity: 0;
-		transform: translateY(30px);
+		transform: translateY(20px);
 		filter: blur(4px);
 	}
 	100% {
@@ -231,9 +239,6 @@ img {
 
 
 @media (prefers-reduced-motion: no-preference) {
-	.hidden {
-		opacity: 0;
-	}
 	.reveal {
 		animation: fadeIn 1s ease 1;
 		animation-fill-mode: both;
@@ -270,19 +275,15 @@ img {
 
 
 
-
-
-
-
-#_1x2 {
+._1x2 {
 	grid-row: span 2;
 	grid-column: span 1;
 }
-#_2x1 {
+._2x1 {
 	grid-row: span 1;
 	grid-column: span 2;
 }
-#_2x2 {
+._2x2 {
 	grid-row: span 2;
 	grid-column: span 2;
 }

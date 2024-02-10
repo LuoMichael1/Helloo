@@ -6,6 +6,7 @@ let root;
 let theme = -1;
 let x;
 
+// used for picture pages where the grid needs to go down to 2 columns if the screen is small and 3 if the screen is wide
 function getWidth() {
     new ResizeObserver(() => {
         window_width = window.innerWidth;
@@ -28,6 +29,7 @@ function changeWidth() {
     }
 }
 
+//----------- butterflys -------------------
 function addButterflys() {
     for (let i = 0; i < number_butterflys; i++) {
         setButterFly(i);
@@ -44,26 +46,28 @@ function setButterFly(butterID) {
     document.getElementById("butterfly" + butterID).style.animation = 'flap'+' 566.66ms linear infinite, move 1'+time+'s linear infinite -'+frame+"s";
 }
 
+//----------- animation for revealing images as the user scrolls down the page ----------------
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('reveal');
-            entry.target.classList.remove('hidden');
+
+            setTimeout(() => {entry.target.classList.remove('reveal'); 
+                }, 1000);
         }
     });
 });
 function addObservers() {
-    const hiddenElements = document.querySelectorAll(".hidden");
+    const hiddenElements = document.querySelectorAll(".content > div");
     hiddenElements.forEach((el) => observer.observe(el));   
 
     themeSetup();
 }
 
 
-
+// ------------- dark mode and light mode ----------------------
 function themeSetup() {
     root = document.querySelector(':root');
-
     if (localStorage.getItem("theme") == "0") {
         localStorage.setItem("theme", "1")
         changeTheme();
@@ -72,7 +76,6 @@ function themeSetup() {
         localStorage.setItem("theme", "1");
     }
 }
-
 function changeTheme() {
     if (localStorage.getItem("theme") == "1") {
         root.style.setProperty('--main-color1', 'rgb(20 20 20)');
@@ -87,6 +90,7 @@ function changeTheme() {
         localStorage.setItem("theme", "1");
     }
 }
+
 
 function indexLoad() {
     themeSetup();
