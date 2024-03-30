@@ -307,7 +307,7 @@ img {
 .butterspritesheet {
 	width: 200px;
 	height: 200px;
-	background-image: url(butterspritesheet.png);
+	background-image: url(butterspritesheet.webp);
     background-repeat: no-repeat;
     display: block;
     background-position-y: -5px;

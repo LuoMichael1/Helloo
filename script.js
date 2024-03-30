@@ -44,7 +44,7 @@ function setButterFly(butterID) {
     let rota = Math.floor(Math.random()*6);
     let delay = Math.floor(Math.random()*20);
 
-    document.getElementById("butterflys").innerHTML += '<img draggable="false" id=butterfly'+butterID+' class="butterspritesheet" style="--order: '+butterID+'" alt="butterfly" src="butterflyplaceholder.webp">';
+    document.getElementById("butterflys").innerHTML += '<img draggable="false" id=butterfly'+butterID+' class="butterspritesheet" style="--order: '+butterID+'" alt="butterfly" src="butterflyplaceholder.png">';
     document.getElementById("butterfly" + butterID).style.backgroundSize = 1680*size + "px " + 210*size + "px";
     document.getElementById("butterfly" + butterID).style.height = 210*size + "px"
     document.getElementById("butterfly" + butterID).style.width = 210*size-2.2 + "px" // rounding can cause a bit of the next image in the sprite to show, the -2.2 mitigates this
