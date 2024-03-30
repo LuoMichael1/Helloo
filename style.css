@@ -131,10 +131,13 @@ img {
 	background-repeat: no-repeat;
 	display: flex;
 	height: 100%;
+}
+
+.contenthover {
 	filter: opacity(1);
 	transition: all 0.8s ease;
 }
-.content > div:hover {
+.contenthover:hover {
 	filter: opacity(0.8);
 }
 

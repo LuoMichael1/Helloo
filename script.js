@@ -124,7 +124,9 @@ const observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting) {
             entry.target.classList.add('reveal');
             setTimeout(() => {entry.target.classList.remove('reveal');
-                }, 1005);
+                }, 1000);
+            setTimeout(() => {entry.target.classList.add('contenthover');;
+                }, 1010);
             removeobs(entry.target);
         }
     });
