@@ -101,9 +101,9 @@ img {
 	/*slightly reduced animation*/
 	@keyframes fadeIn {
 		0% {
-			opacity: 0;
+			opacity: 0.1;
 			transform: translateY(18px);
-			filter: blur(1px);
+			filter: blur(2px);
 		}
 		100% {
 			opacity: 1;
@@ -227,9 +227,9 @@ img {
 
 @keyframes fadeIn {
 	0% {
-		opacity: 0;
+		opacity: 0.1;
 		transform: translateY(20px);
-		filter: blur(4px);
+		filter: blur(3px);
 	}
 	100% {
 		opacity: 1;

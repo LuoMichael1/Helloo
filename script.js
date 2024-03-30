@@ -115,16 +115,25 @@ function pictureLoad() {
 }
 
 //----------- animation for revealing images as the user scrolls down the page ----------------
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
+let options = {
+    root: null,
+    rootMargin: "10%",
+};
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('reveal');
-
-            setTimeout(() => {entry.target.classList.remove('reveal'); 
-                }, 1000);
+            setTimeout(() => {entry.target.classList.remove('reveal');
+                }, 1005);
+            removeobs(entry.target);
         }
     });
-});
+}, options);
+function removeobs(target) {
+    observer.unobserve(target);
+}
+
+
 function addObservers() {
     const hiddenElements = document.querySelectorAll(".content > div");
     hiddenElements.forEach((el) => observer.observe(el));   
