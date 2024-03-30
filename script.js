@@ -60,20 +60,26 @@ let flap = 0;
 
 function movesprite() {
     for (let i = 0; i < numberOfFrames; i++) {
-        flap = i+counter;    
+        flap = i+counter; 
         if (flap>7) {
             flap = flap-8;
-        }
-    root.style.setProperty('--f'+(i+1), flap);
-    
+        }  
+    document.getElementById("butterflys").style.setProperty('--f'+(i+1), flap);
 }
     counter = counter+1;
     if (counter == 8) {
         counter = 0;
     }
 }
-// roughly 24fps
-setInterval(movesprite, 41.6);
+
+
+
+function loadbutterfly() {
+    addButterflys();
+
+    // roughly 24fps
+    setInterval(movesprite, 41.66);
+}
 
 // ------------- dark mode and light mode ----------------------
 function themeSetup() {
@@ -103,9 +109,12 @@ function changeTheme() {
 
 function indexLoad() {
     themeSetup();
-    addButterflys();
+    loadbutterfly();
 }
-
+function pictureLoad() {
+    themeSetup();
+    addObservers();
+}
 
 //----------- animation for revealing images as the user scrolls down the page ----------------
 const observer = new IntersectionObserver((entries) => {
@@ -118,11 +127,10 @@ const observer = new IntersectionObserver((entries) => {
         }
     });
 });
+
 function addObservers() {
     const hiddenElements = document.querySelectorAll(".content > div");
     hiddenElements.forEach((el) => observer.observe(el));   
-
-    themeSetup();
 }
 
 

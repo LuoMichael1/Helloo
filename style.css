@@ -2,15 +2,6 @@
 	--main-color1: white; /* Background */
 	--main-color2: black; /* text */
 	--highlight-color: #FF4A80;
-
-	--f1: 0 ;
-	--f2: 0 ;
-	--f3: 0 ;
-	--f4: 0 ;
-	--f5: 0 ;
-	--f6: 0 ;
-	--f7: 0 ;
-	--f8: 0 ;
 }
 
 
@@ -205,7 +196,6 @@ img {
 	mix-blend-mode: difference;
 	filter: brightness(1.7) hue-rotate(110deg) invert(1);
 }
-
 
 .date {
 	margin-left: auto !important;
