@@ -1,4 +1,3 @@
-
 let number_butterflys = 22;
 
 //----------- butterflys -------------------
@@ -52,3 +51,6 @@ function loadbutterfly() {
     setInterval(movesprite, 41.66*0.8);
 }
 
+function indexLoad() {
+    loadbutterfly();
+}
