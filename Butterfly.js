@@ -6,6 +6,7 @@ function addButterflys() {
         setButterFly(i);
     }
 }
+
 function setButterFly(butterID) {
     let time = Math.random()*9;
     let flap = (Math.floor(Math.random()*8))+1;
@@ -49,8 +50,4 @@ function loadbutterfly() {
 
     // roughly 24fps
     setInterval(movesprite, 41.66*0.8);
-}
-
-function indexLoad() {
-    loadbutterfly();
 }
