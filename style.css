@@ -2,6 +2,9 @@
 	--main-color1: white; /* Background */
 	--main-color2: black; /* text */
 	--highlight-color: #FF4A80;
+
+	--butterspacing: 2.4em;
+	--butterflapbounceheight: 2;
 }
 
 
@@ -28,8 +31,10 @@ h1 {
 	font-size: 12vw;
 	margin-right: 20px;
 	margin-left: 0.5vw;
-	margin-top: 70px;
-	margin-bottom: 10px;
+	margin-top: 1.7em;
+	margin-bottom: 0.05em;
+	line-height: 1em;
+	letter-spacing: -0.05em;
 }
 
 h2 {
@@ -194,12 +199,6 @@ img {
 	color: black !important;
 }
 
-.butterfly {
-	position: absolute;
-	mix-blend-mode: difference;
-	filter: brightness(1.7) hue-rotate(110deg) invert(1);
-}
-
 .date {
 	margin-left: auto !important;
 }
@@ -222,12 +221,6 @@ img {
 	background-color: var(--highlight-color);
 }
 
-@keyframes move1 {
-	0% {transform: translateY(1000px);}
-	100% {transform: translateY(2000px);}
-}
-
-
 @keyframes fadeIn {
 	0% {
 		opacity: 0.1;
@@ -249,33 +242,6 @@ img {
 		animation: fadeIn 2s ease 1;
 		animation-fill-mode: both;
 	}
-
-
-	/* -------------- Butterfly animation -----------------*/
-	@keyframes move {
-		0% {transform: translateY(440px);}
-		100% {transform: translateY(-2000px);}
-	}
-	
-
-	@keyframes move1 {
-		0% {
-			transform: translateX(-440px) translateY(100px);
-		}
-		100% {
-			transform: translateX(2000px) translateY(-650px);
-		}
-	}
-	@keyframes flap1 {
-		0% {top: calc(45px * var(--order) - 15px);} 
-		59% {top: calc(45px * var(--order));}
-		100% {top: calc(45px * var(--order) - 15px);}
-	}
-	@keyframes flap2 {
-		0% {top: calc(45px * var(--order));} 
-		59% {top: calc(45px * var(--order) - 15px);}
-		100% {top: calc(45px * var(--order));}
-	}
 }
 
 
@@ -290,8 +256,6 @@ img {
 	border-width: 0;
 }
 
-
-
 ._1x2 {
 	grid-row: span 2;
 	grid-column: span 1;
@@ -303,22 +267,4 @@ img {
 ._2x2 {
 	grid-row: span 2;
 	grid-column: span 2;
-}
-
-
-
-.butterspritesheet {
-	width: 200px;
-	height: 200px;
-	background-image: url(butterspritesheet.webp);
-    background-repeat: no-repeat;
-    display: block;
-    background-position-y: -5px;
-	filter: invert(1);
-
-	position: absolute;
-
-	scale: 100%;
-	animation: flap 566.66ms linear infinite, move1 10s linear infinite;
-	mix-blend-mode: difference;
 }

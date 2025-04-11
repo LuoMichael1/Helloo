@@ -1,33 +1,5 @@
-let window_width = window.innerWidth;
-let tile_width;
+
 let number_butterflys = 22;
-
-let root;
-let theme = -1;
-let x;
-
-// used for the picture pages where the grid needs to go down to 2 columns if the screen is small and 3 if the screen is wide
-function getWidth() {
-    new ResizeObserver(() => {
-        window_width = window.innerWidth;
-        changeWidth();
-    }).observe(document.body)
-}
-function changeWidth() {    
-    tile_width = window_width*0.8;
-
-    if (tile_width > 700) {
-        tile_width /= 3;
-        tile_width -= 11;
-        document.getElementById("renders").style.gridAutoRows = tile_width + 'px';
-        document.getElementById("renders").style.gridTemplateColumns = 'repeat(3, '+ tile_width + 'px)';
-    }
-    else {
-        tile_width /= 2;
-        document.getElementById("renders").style.gridAutoRows = tile_width + 'px';
-        document.getElementById("renders").style.gridTemplateColumns = 'repeat(2, '+ tile_width + 'px)';
-    }
-}
 
 //----------- butterflys -------------------
 function addButterflys() {

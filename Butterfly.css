@@ -1,0 +1,74 @@
+:root {
+	--butterspacing: 2.4em;
+	--butterflapbounceheight: 2;
+}
+
+/* for phones mostly*/
+@media (orientation: portrait) {
+}
+
+.butterfly {
+	position: absolute;
+	mix-blend-mode: difference;
+	filter: brightness(1.7) hue-rotate(110deg) invert(1);
+}
+
+@keyframes move1 {
+	0% {transform: translateY(1000px);}
+	100% {transform: translateY(2000px);}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.reveal {
+		animation: fadeIn 1s ease 1;
+		animation-fill-mode: both;
+	}
+	.reveal2 {
+		animation: fadeIn 2s ease 1;
+		animation-fill-mode: both;
+	}
+
+
+	/* -------------- Butterfly animation -----------------*/
+	@keyframes move {
+		0% {transform: translateY(440px);}
+		100% {transform: translateY(-2000px);}
+	}
+	
+
+	@keyframes move1 {
+		0% {
+			transform: translateX(-440px) translateY(100px);
+		}
+		100% {
+			transform: translateX(2000px) translateY(-650px);
+		}
+	}
+	
+	@keyframes flap1 {
+		0% {top: calc(var(--butterspacing) * var(--order) - 15px*var(--butterflapbounceheight));} 
+		59% {top: calc(var(--butterspacing) * var(--order));}
+		100% {top: calc(var(--butterspacing) * var(--order) - 15px*var(--butterflapbounceheight));}
+	}
+	@keyframes flap2 {
+		0% {top: calc(var(--butterspacing) * var(--order));} 
+		59% {top: calc(var(--butterspacing) * var(--order) - 15px*var(--butterflapbounceheight));}
+		100% {top: calc(var(--butterspacing) * var(--order));}
+	}
+}
+
+.butterspritesheet {
+	width: 200px;
+	height: 200px;
+	background-image: url(butterspritesheet.webp);
+    background-repeat: no-repeat;
+    display: block;
+    background-position-y: -5px;
+	filter: invert(1);
+
+	position: absolute;
+
+	scale: 100%;
+	animation: flap 566.66ms linear infinite, move1 10s linear infinite;
+	mix-blend-mode: difference;
+}
